@@ -1,0 +1,123 @@
+(footprint "SW-SMD_6P-L9.1-W3.5-P2.50"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -6.9 0)
+		(layer "F.SilkS")
+		(uuid "133d2fbe-cb5f-4ce3-a5d6-b50e4af4043b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "SW-SMD_6P-L9.1-W3.5-P2.50"
+		(at 0 6.9 0)
+		(layer "F.Fab")
+		(uuid "95934f5e-62a6-483c-a65a-ad11f50993af")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7bc37e3e-0864-4ed2-a0af-10ccbf0fafd8")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "65d8f9d5-7e1c-4405-ad90-ea3ee6d7dcd1")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_circle
+		(center -4.55 3.73)
+		(end -4.52 3.73)
+		(stroke
+			(width 0.06)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "dcae0c2c-8f69-4b54-8bb3-ecb5440bd0c5")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "897dc8fa-2e98-4423-9355-9d44c4be4d88")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -2.5 2.9 270)
+		(size 2 1.2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "ead975ad-7f2d-4602-b27b-018524727ae5")
+	)
+	(pad "2" smd rect
+		(at 0 2.9 270)
+		(size 2 1.2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "3abdfe10-57c5-482d-b3cb-282790071fce")
+	)
+	(pad "3" smd rect
+		(at 2.5 2.9 270)
+		(size 2 1.2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "c4ab725b-fe0c-4252-99d2-d3628a86fe0c")
+	)
+	(pad "4" smd rect
+		(at -2.5 -2.9 270)
+		(size 2 1.2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "64b155b8-01d8-42b2-9cb6-487989920035")
+	)
+	(pad "5" smd rect
+		(at 0 -2.9 270)
+		(size 2 1.2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "1c2de662-5dd5-44d7-9901-09f4e79cd6c4")
+	)
+	(pad "6" smd rect
+		(at 2.5 -2.9 270)
+		(size 2 1.2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "ba88e947-3a62-4cb3-abe1-bdd7cb2b6ce5")
+	)
+	(embedded_fonts no)
+	(model "/mnt/Home/User/Circuit/kicad_symbol/lcsc.3dshapes/SW-SMD_6P-L9.1-W3.5-P2.50.wrl"
+		(offset
+			(xyz 0 -0.14 -0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

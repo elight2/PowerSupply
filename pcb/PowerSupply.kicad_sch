@@ -2676,6 +2676,16 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "电源RC滤波"
+		(exclude_from_sim no)
+		(at 233.172 218.948 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "18b7d380-538e-4f2a-9ab2-d566df93cb74")
+	)
 	(text "延迟启动"
 		(exclude_from_sim no)
 		(at 231.14 171.704 0)
@@ -2725,6 +2735,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2f6778b6-ebb7-4dc2-995a-5e02a152fee9")
+	)
+	(junction
+		(at 242.57 207.01)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "302f76ab-ceb7-4603-80de-2ac7da12bcb9")
 	)
 	(junction
 		(at 97.79 267.97)
@@ -2884,6 +2900,16 @@
 	)
 	(wire
 		(pts
+			(xy 242.57 205.74) (xy 242.57 207.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0288234a-d8da-48e5-bdfd-f80ee34defc8")
+	)
+	(wire
+		(pts
 			(xy 201.93 24.13) (xy 209.55 24.13)
 		)
 		(stroke
@@ -3011,6 +3037,16 @@
 			(type default)
 		)
 		(uuid "195d2aed-e272-4044-9d3c-509bb605356c")
+	)
+	(wire
+		(pts
+			(xy 240.03 198.12) (xy 242.57 198.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1b63267b-077f-4e0a-afbe-6511c1993536")
 	)
 	(wire
 		(pts
@@ -3281,6 +3317,16 @@
 			(type default)
 		)
 		(uuid "44be9af1-6a89-4374-8ef7-b9ff0b4e81f6")
+	)
+	(wire
+		(pts
+			(xy 242.57 207.01) (xy 242.57 209.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "44fd4fd1-58db-46cc-a987-42fc54c16138")
 	)
 	(wire
 		(pts
@@ -3984,6 +4030,16 @@
 	)
 	(wire
 		(pts
+			(xy 233.68 207.01) (xy 242.57 207.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aba6249c-fcb7-4a88-9604-7a935534266c")
+	)
+	(wire
+		(pts
 			(xy 80.01 210.82) (xy 80.01 215.9)
 		)
 		(stroke
@@ -4474,6 +4530,16 @@
 	)
 	(wire
 		(pts
+			(xy 242.57 217.17) (xy 242.57 218.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fbf78dcb-7684-43d0-a750-0114ba15e8fd")
+	)
+	(wire
+		(pts
 			(xy 24.13 194.31) (xy 30.48 194.31)
 		)
 		(stroke
@@ -4501,6 +4567,16 @@
 			(type default)
 		)
 		(uuid "fd860210-8b08-4cc0-8e50-3d2c8da99ad6")
+	)
+	(label "VIN"
+		(at 294.64 127 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0b0bb65c-84a9-4ebb-b659-caf1fdc6e4e9")
 	)
 	(label "EN_UVLO"
 		(at 229.87 140.97 0)
@@ -4531,6 +4607,16 @@
 			(justify left bottom)
 		)
 		(uuid "cbdbb9f3-b77f-4686-b77d-27e598167346")
+	)
+	(label "VIN"
+		(at 233.68 207.01 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d997a61f-f489-4fe5-b7a7-eed3db1d18b1")
 	)
 	(label "SS"
 		(at 237.49 170.18 0)
@@ -5646,30 +5732,6 @@
 			)
 		)
 	)
-	(global_label "vin"
-		(shape input)
-		(at 294.64 127 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "b2b6ceb0-4b8a-4b95-84e6-39d96e29cea8")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 294.64 121.2934 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
 	(global_label "sw2"
 		(shape input)
 		(at 316.23 165.1 0)
@@ -6099,6 +6161,30 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+	)
+	(global_label "USB_VBUS"
+		(shape input)
+		(at 240.03 198.12 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e59549d1-a50c-4c58-aac8-19bd13036a3b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 227.3686 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 	)
@@ -6583,6 +6669,85 @@
 			(project "PowerSupply"
 				(path "/3ecbe32c-4290-401a-9b8c-a7a0b4ba8879"
 					(reference "R6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 242.57 201.93 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "10f42740-6402-4db7-918c-8b69967126b4")
+		(property "Reference" "R18"
+			(at 238.506 201.676 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10R"
+			(at 238.76 204.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 244.348 201.93 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 242.57 201.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 242.57 201.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "63ac0887-08a2-4286-aba1-23f11f0b2bd0")
+		)
+		(pin "2"
+			(uuid "6b3399b1-c15d-4e89-beec-ac791714c976")
+		)
+		(instances
+			(project "PowerSupply"
+				(path "/3ecbe32c-4290-401a-9b8c-a7a0b4ba8879"
+					(reference "R18")
 					(unit 1)
 				)
 			)
@@ -10150,6 +10315,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 242.57 218.44 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a3a7a437-a250-4e52-b99c-7ee832d45ab8")
+		(property "Reference" "#PWR020"
+			(at 242.57 224.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 242.57 223.52 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 242.57 218.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 242.57 218.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 242.57 218.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "396dd3f5-d082-41f0-8e20-e4f13d229b66")
+		)
+		(instances
+			(project "PowerSupply"
+				(path "/3ecbe32c-4290-401a-9b8c-a7a0b4ba8879"
+					(reference "#PWR020")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 69.85 194.31 270)
 		(unit 1)
@@ -11616,6 +11859,87 @@
 			(project "PowerSupply"
 				(path "/3ecbe32c-4290-401a-9b8c-a7a0b4ba8879"
 					(reference "Q4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 242.57 213.36 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e10970ba-d0d8-463a-bf32-1a206c2e7edd")
+		(property "Reference" "C27"
+			(at 236.728 214.122 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n 63V"
+			(at 239.268 211.836 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 241.6048 209.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 242.57 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 242.57 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "3efec829-9a98-43d2-91b1-56f2042e43d4")
+		)
+		(pin "1"
+			(uuid "d1d0f371-cc54-454f-840b-08a2c7606057")
+		)
+		(instances
+			(project "PowerSupply"
+				(path "/3ecbe32c-4290-401a-9b8c-a7a0b4ba8879"
+					(reference "C27")
 					(unit 1)
 				)
 			)

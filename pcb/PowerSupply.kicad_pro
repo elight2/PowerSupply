@@ -645,7 +645,7 @@
         "uuid": "3ecbe32c-4290-401a-9b8c-a7a0b4ba8879"
       }
     ],
-    "used_designators": "",
+    "used_designators": "U3,R20,SW1",
     "variants": []
   },
   "sheets": [
@@ -656,6 +656,10 @@
     [
       "52948868-4154-4f87-b260-a7c6d385dce1",
       "ch224k"
+    ],
+    [
+      "c5f585ee-5cf7-4710-bb3a-23653df978a2",
+      "stm32"
     ]
   ],
   "text_variables": {},

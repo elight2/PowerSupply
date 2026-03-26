@@ -645,7 +645,7 @@
         "uuid": "3ecbe32c-4290-401a-9b8c-a7a0b4ba8879"
       }
     ],
-    "used_designators": "U3,R20,SW1",
+    "used_designators": "C30,Q5,U3,R20,SW1",
     "variants": []
   },
   "sheets": [

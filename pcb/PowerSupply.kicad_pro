@@ -650,7 +650,7 @@
         "uuid": "3ecbe32c-4290-401a-9b8c-a7a0b4ba8879"
       }
     ],
-    "used_designators": "#PWR30-31,C36-52",
+    "used_designators": "R30,#PWR32-33,C53-55",
     "variants": []
   },
   "sheets": [

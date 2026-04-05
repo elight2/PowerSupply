@@ -897,7 +897,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6b7d5a5c-85ea-46a7-96b6-9bc746e8eb56")
-		(property "Reference" "R20"
+		(property "Reference" "R15"
 			(at 154.94 58.4199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -961,7 +961,7 @@
 		(instances
 			(project "PowerSupply"
 				(path "/3ecbe32c-4290-401a-9b8c-a7a0b4ba8879/52948868-4154-4f87-b260-a7c6d385dce1"
-					(reference "R20")
+					(reference "R15")
 					(unit 1)
 				)
 			)
@@ -979,7 +979,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d3b83d74-9232-4700-b50c-a471fc658139")
-		(property "Reference" "U3"
+		(property "Reference" "U2"
 			(at 129.1433 80.01 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1070,7 +1070,7 @@
 		(instances
 			(project "PowerSupply"
 				(path "/3ecbe32c-4290-401a-9b8c-a7a0b4ba8879/52948868-4154-4f87-b260-a7c6d385dce1"
-					(reference "U3")
+					(reference "U2")
 					(unit 1)
 				)
 			)

@@ -2949,7 +2949,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_USB:USB_C_Receptacle_GCT_USB4125-xx-x-0190_6P_TopMnt_Horizontal"
+		(property "Footprint" "lcsc_pro:USB-TYPE-C-SMD_TYPE-C"
 			(at 106.68 100.33 0)
 			(hide yes)
 			(show_name no)

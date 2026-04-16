@@ -113,6 +113,7 @@
 		)
 		(capping no)
 		(filling no)
+		(zone_defaults)
 		(pcbplotparams
 			(layerselection 0x00000000_00000000_55555555_5755f5ff)
 			(plot_on_all_layers_selection 0x00000000_00000000_00000000_00000000)
@@ -18086,6 +18087,14 @@
 		(layer "F.Cu")
 		(net "USB_VBUS")
 		(uuid "69057c6e-2e08-497b-8af2-a02e49ccc8cf")
+	)
+	(segment
+		(start 152 59.95)
+		(end 157.525 59.95)
+		(width 1.1684)
+		(layer "F.Cu")
+		(net "USB_VBUS")
+		(uuid "b8674b6e-14fd-494c-8a14-dcba407c3c88")
 	)
 	(segment
 		(start 151 59.525)

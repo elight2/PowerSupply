@@ -1,0 +1,1568 @@
+
+**** 05/20/26 21:33:48 *** PSpice 24.1.0 (4 September 2024) *** ID# 0 ********
+
+ ** Profile: "Startup-trans"  [ C:\Users\main\Desktop\LM5176_PSPICE_TRANS\lm5176_trans-pspicefiles\startup\trans.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "trans.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../lm5176_trans.lib" 
+* From [PSPICE NETLIST] section of C:\Users\main\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\24.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 5m 0 20n 
+.OPTIONS STEPGMIN
+.OPTIONS ADVCONV
+.OPTIONS ABSTOL= 10.0n
+.OPTIONS ITL1= 1500
+.OPTIONS ITL2= 400
+.OPTIONS ITL4= 60
+.OPTIONS RELTOL= 0.01
+.OPTIONS VNTOL= 10.0u
+.OPTIONS SPEED_LEVEL= 5
+.PROBE64 N([VOSNS-])
+.PROBE64 I(V_VIN)
+.PROBE64 W(V_VIN)
+.PROBE64 W(X_U2)
+.INC "..\Startup.net" 
+
+
+
+**** INCLUDING Startup.net ****
+* source LM5176_TRANS
+X_U2         0 VOSNS- BOOT1 BOOT2 COMP CS CSG DITH EN FB HDRV1 HDRV2 N16806770
++  N16806697 LDRV1 LDRV2 MODE 0 0 N16806749 RT_SYNC SLOPE SS SW1 SW2 VCC
++  N16806353 VINSNS VOSNS- LM5176_TRANS PARAMS: SS=0
+C_C24         N16806770 N16806697  1u IC=0 
+R_R51         N16806490 LDRV2  0.6  
+C_C3         VIN 0  2.2u IC=0 
+R_R53         HDRV1 N16806513  1.6  
+R_R8         CSG 0  100  
+C_C21         SS 0  10n  
+R_R14         N16806635 FB  280k  
+X_C7         VOSNS+ 0 CESR PARAMS: C=2.2u ESR=2m IC=1N X=1
+X_C13         VOSNS- 0 CESR PARAMS: C=100u ESR=16m IC=0 X=1
+R_R21         VOSNS+ N16806770  100  
+C_C5         VIN 0  2.2u IC=0 
+D_D9         N16806389 SW1 Dbreak 
+X_L1         SW1 SW2 LDCR PARAMS: L=4.7u DCR=3.35m
+C_C22         N168069590 COMP  0.033u IC=0 
+R_R6         CS N16806389  100  
+D_D4         VCC BOOT1 Dbreak 
+R_R9         N16806366 N16806353  10  
+R_R7         0 N16806389  0.004  
+X_S14    N16806496 N16806389 SW1 N16806389 Startup_S14 
+C_C32         VIN 0  2.2u IC=0 
+R_R22         0 FB  20k  
+X_C10         VOSNS+ 0 CESR PARAMS: C=2.2u ESR=2m IC=1N X=1
+R_R16         VOSNS- N16806697  100  
+R_R1         VOSNS+ VOSNS-  4m  
+R_RLOAD         VOSNS- 0  {12/7}  
+D_D7         SW1 VIN Dbreak 
+C_C16         VCC 0  4.7u  
+C_C25         0 VOSNS-  0.22u IC=0 
+R_R13         VIN EN  249k  
+C_C30         VOSNS- 0  100p IC=0 
+C_C18         BOOT1 SW1  100n IC=0 
+C_C28         0 COMP  330pF  
+R_R15         VIN VINSNS  2k  
+R_R18         EN 0  75k  
+C_C17         N16806353 0  0.1u  
+D_D10         N16806389 SW2 Dbreak 
+R_R50         N16806536 HDRV2  0.6  
+X_S4    N16806490 N16806389 SW2 N16806389 Startup_S4 
+C_C4         VIN 0  2.2u IC=0 
+R_R11         VOSNS- N16806635  10  
+X_S5    N16806513 SW1 VIN SW1 Startup_S5 
+R_R19         0 MODE  93.1k  
+R_R10         N16806749 VCC  10k  
+X_C8         VOSNS+ 0 CESR PARAMS: C=2.2u ESR=2m IC=1N X=1
+D_D8         SW2 VOSNS+ Dbreak 
+D_D3         VIN N16806366 Dbreak 
+X_C9         VOSNS+ 0 CESR PARAMS: C=2.2u ESR=2m IC=1N X=1
+C_C1         VIN 0  100u IC=0 
+R_R23         0 N168069590  20k  
+R_R55         LDRV1 N16806496  1.6  
+C_C2         VIN 0  2.2u IC=0 
+V_VIN         VIN 0  
++PWL 0 0 1u 0 100u 12 10m 12 
+C_C29         0 SLOPE  470p IC=0 
+C_C19         BOOT2 SW2  100n IC=0 
+X_C11         VOSNS+ 0 CESR PARAMS: C=2.2u ESR=2m IC=1N X=1
+X_S6    N16806536 SW2 VOSNS+ SW2 Startup_S6 
+D_D5         VCC BOOT2 Dbreak 
+C_C15         CS CSG  47p IC=0 
+X_C33         VOSNS- 0 CESR PARAMS: C=100u ESR=16m IC=0 X=1
+X_C34         VOSNS- 0 CESR PARAMS: C=100u ESR=16m IC=0 X=1
+X_C35         VOSNS- 0 CESR PARAMS: C=100u ESR=16m IC=0 X=1
+X_C36         VOSNS- 0 CESR PARAMS: C=100u ESR=16m IC=0 X=1
+X_C37         VOSNS- 0 CESR PARAMS: C=100u ESR=16m IC=0 X=1
+C_C38         0 DITH  10n  TC=0,0 
+R_R20         0 RT_SYNC  33.2k  
+R_R56         0 DITH  1G TC=0,0 
+
+.subckt Startup_S14 1 2 3 4  
+S_S14         3 4 1 2 _S14
+RS_S14         1 2 1G
+.MODEL         _S14 VSWITCH Roff=10e10 Ron=3.9m Voff=2.1 Von=2.8
+.ends Startup_S14
+
+.subckt Startup_S4 1 2 3 4  
+S_S4         3 4 1 2 _S4
+RS_S4         1 2 1G
+.MODEL         _S4 VSWITCH Roff=10e10 Ron=1.4m Voff=1.2 Von=1.7
+.ends Startup_S4
+
+.subckt Startup_S5 1 2 3 4  
+S_S5         3 4 1 2 _S5
+RS_S5         1 2 1G
+.MODEL         _S5 VSWITCH Roff=10e10 Ron=3.9m Voff=2.1 Von=2.8
+.ends Startup_S5
+
+.subckt Startup_S6 1 2 3 4  
+S_S6         3 4 1 2 _S6
+RS_S6         1 2 1G
+.MODEL         _S6 VSWITCH Roff=10e10 Ron=1.4m Voff=1.2 Von=1.7
+.ends Startup_S6
+
+**** RESUMING trans.cir ****
+.END
+
+**** 05/20/26 21:33:48 *** PSpice 24.1.0 (4 September 2024) *** ID# 0 ********
+
+ ** Profile: "Startup-trans"  [ C:\Users\main\Desktop\LM5176_PSPICE_TRANS\lm5176_trans-pspicefiles\startup\trans.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Dbreak          D_D111          D_D11           D_D1            
+          IS   10.000000E-15    1.000000E-15    1.000000E-15    1.000000E-15 
+           N     .01             .01             .1             1.000000E-03 
+          RS                                                     .05         
+          TT                                                   10.000000E-12 
+         CJO   10.000000E-15                                                 
+         XTI    2                                                            
+
+
+               X_U2.X_current_limit_U31.d_d1 
+          IS    1.000000E-15 
+           N     .01         
+          RS    5.000000E-03 
+          TT   10.000000E-12 
+
+
+               X_U2.X_current_limit_U643.d_d1 
+          IS    1.000000E-15 
+           N     .01         
+          RS    5.000000E-03 
+          TT   10.000000E-12 
+
+
+               X_U2.X_CS_AMP_U643.d_d1 
+          IS    1.000000E-15 
+           N     .01         
+          RS    5.000000E-03 
+          TT   10.000000E-12 
+
+
+               X_U2.X_CS_AMP_U1912603712.d_d1 
+          IS    1.000000E-15 
+           N     .01         
+          RS    5.000000E-03 
+          TT   10.000000E-12 
+
+
+               X_U2.X_CS_AMP_U1912603719.d_d1 
+          IS    1.000000E-15 
+           N     .01         
+          RS    5.000000E-03 
+          TT   10.000000E-12 
+
+
+               X_U2.X_min_timer_U650.d_d1 
+          IS    1.000000E-15 
+           N     .01         
+          RS    5.000000E-03 
+          TT   10.000000E-12 
+
+
+               X_U2.X_min_timer_U653.d_d1 
+          IS    1.000000E-15 
+           N     .01         
+          RS    5.000000E-03 
+          TT   10.000000E-12 
+
+
+               X_U2.X_min_timer_U829.d_d1 
+          IS    1.000000E-15 
+           N     .01         
+          RS    5.000000E-03 
+          TT   10.000000E-12 
+
+
+               X_U2.X_min_timer_U652.d_d1 
+          IS    1.000000E-15 
+           N     .01         
+          RS    5.000000E-03 
+          TT   10.000000E-12 
+
+
+               X_U2.X_min_timer_U654.d_d1 
+          IS    1.000000E-15 
+           N     .01         
+          RS    5.000000E-03 
+          TT   10.000000E-12 
+
+
+**** 05/20/26 21:33:48 *** PSpice 24.1.0 (4 September 2024) *** ID# 0 ********
+
+ ** Profile: "Startup-trans"  [ C:\Users\main\Desktop\LM5176_PSPICE_TRANS\lm5176_trans-pspicefiles\startup\trans.sim ] 
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_S14._S14      X_S4._S4        X_S5._S5        X_S6._S6        
+         RON    3.900000E-03    1.400000E-03    3.900000E-03    1.400000E-03 
+        ROFF  100.000000E+09  100.000000E+09  100.000000E+09  100.000000E+09 
+         VON    2.8             1.7             2.8             1.7          
+        VOFF    2.1             1.2             2.1             1.2          
+
+
+               X_U2.X_current_limit_S6._current_limit_S6 
+         RON    1            
+        ROFF    1.000000E+09 
+         VON     .75         
+        VOFF     .25         
+
+
+               X_U2.X_current_limit_S4._current_limit_S4 
+         RON    1            
+        ROFF    1.000000E+09 
+         VON     .75         
+        VOFF     .25         
+
+
+               X_U2.X_Drivers_S14._Drivers_S14 
+         RON    1            
+        ROFF  100.000000E+09 
+         VON     .2          
+        VOFF     .8          
+
+
+               X_U2.X_Drivers_S12._Drivers_S12 
+         RON    1            
+        ROFF  100.000000E+09 
+         VON     .2          
+        VOFF     .8          
+
+
+               X_U2.X_Drivers_S3._Drivers_S3 
+         RON    1.5          
+        ROFF  100.000000E+09 
+         VON     .8          
+        VOFF     .2          
+
+
+               X_U2.X_Drivers_S13._Drivers_S13 
+         RON    1.5          
+        ROFF  100.000000E+09 
+         VON     .8          
+        VOFF     .2          
+
+
+               X_U2.X_Drivers_S6._Drivers_S6 
+         RON    1            
+        ROFF    1.000000E+09 
+         VON     .2          
+        VOFF     .8          
+
+
+               X_U2.X_Drivers_S4._Drivers_S4 
+         RON    1            
+        ROFF  100.000000E+09 
+         VON     .2          
+        VOFF     .8          
+
+
+               X_U2.X_Drivers_S5._Drivers_S5 
+         RON    1.5          
+        ROFF    1.000000E+09 
+         VON     .8          
+        VOFF     .2          
+
+
+               X_U2.X_Drivers_S11._Drivers_S11 
+         RON    1.5          
+        ROFF  100.000000E+09 
+         VON     .8          
+        VOFF     .2          
+
+
+               X_U2.X_CS_AMP_S14._CS_AMP_S14 
+         RON     .01         
+        ROFF   10.000000E+06 
+         VON     .2          
+        VOFF     .8          
+
+
+               X_U2.X_CS_AMP_S15._CS_AMP_S15 
+         RON     .01         
+        ROFF   10.000000E+06 
+         VON     .8          
+        VOFF     .2          
+
+
+               X_U2.X_OSC_U136.s1 
+         RON    1            
+        ROFF    1.000000E+09 
+         VON     .75         
+        VOFF     .25         
+
+
+               X_U2.X_OSC_S26._OSC_S26 
+         RON    1            
+        ROFF  100.000000E+06 
+         VON     .8          
+        VOFF     .2          
+
+
+               X_U2.X_min_timer_min_on_S1._min_timer_min_on_S1 
+         RON  289            
+        ROFF  288.6          
+         VON     .8          
+        VOFF     .2          
+
+
+               X_U2.X_EA_SS_CCLOOP_S1._EA_SS_CCLOOP_S1 
+         RON   30            
+        ROFF    1.000000E+09 
+         VON     .8          
+        VOFF     .2          
+
+
+               X_U2.X_PGOOD_OVP_S3._PGOOD_OVP_S3 
+         RON  100            
+        ROFF  100.000000E+09 
+         VON     .8          
+        VOFF     .2          
+
+
+               X_U2.X_Sample_Hold_S13._Sample_Hold_S13 
+         RON    1.000000E-03 
+        ROFF  100.000000E+06 
+         VON     .8          
+        VOFF     .2          
+
+
+               X_U2.X_Sample_Hold_S14._Sample_Hold_S14 
+         RON    1.000000E-03 
+        ROFF  100.000000E+06 
+         VON     .8          
+        VOFF     .2          
+
+
+               X_U2.X_Slope_Comp_S19._Slope_Comp_S19 
+         RON     .01         
+        ROFF    1.000000E+09 
+         VON     .2          
+        VOFF     .8          
+
+
+WARNING(ORPSIM-16534): Using high values of ITL4 for Speed Level > 0 may increase total simulation job time.
+
+**** 05/20/26 21:33:48 *** PSpice 24.1.0 (4 September 2024) *** ID# 0 ********
+
+ ** Profile: "Startup-trans"  [ C:\Users\main\Desktop\LM5176_PSPICE_TRANS\lm5176_trans-pspicefiles\startup\trans.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   CS) 5.785E-21  (   EN) 380.5E-09  (   FB) 9.005E-12  (   SS) 4.882E-15      
+
+(  CSG) 5.785E-21  (  SW1)-526.2E-12  (  SW2)-3.100E-09  (  VCC)    0.0000      
+
+(  VIN)    0.0000  ( COMP)-598.5E-06  ( DITH)    0.0000  ( MODE) 1.397E-06      
+
+(BOOT1)-526.2E-12  (BOOT2)-3.100E-09  (HDRV1)-526.2E-12  (HDRV2)-3.100E-09      
+
+(LDRV1) 11.58E-30  (LDRV2) 11.58E-30  (SLOPE) 19.80E-15  (VINSNS)    0.0000     
+
+(VOSNS+) 855.8E-12 (VOSNS-) 135.1E-12 (X_C7.1)-72.08E-12 (X_C8.1)-72.08E-12     
+
+(X_C9.1)-72.08E-12 (X_L1.1)-3.100E-09 (RT_SYNC)    4.9999                       
+
+(X_C10.1)-72.08E-12                   (X_C11.1)-72.08E-12                       
+
+(X_C13.1) 120.1E-12                   (X_C33.1) 120.1E-12                       
+
+(X_C34.1) 120.1E-12                   (X_C35.1) 120.1E-12                       
+
+(X_C36.1) 120.1E-12                   (X_C37.1) 120.1E-12                       
+
+(X_U2.CL)    0.0000                   (X_U2.CCM)    0.0000                      
+
+(X_U2.CLK)    0.0000                  (X_U2.OVP)    0.0000                      
+
+(X_U2.PWM)    1.0000                  (X_U2.SCP)    0.0000                      
+
+(X_U2.VCS) 115.7E-27                  (N16806353)-89.87E-12                     
+
+(N16806366)-89.87E-12                 (N16806389) 11.57E-21                     
+
+(N16806490) 18.53E-30                 (N16806496) 30.11E-30                     
+
+(N16806513)-526.2E-12                 (N16806536)-3.100E-09                     
+
+(N16806635) 135.1E-12                 (N16806697) 495.5E-12                     
+
+(N16806749)    0.0000                 (N16806770) 495.5E-12                     
+
+(X_U2.CLKB)    1.0000                 (X_U2.SDWN)    1.0000                     
+
+(X_U2.TOFF)    0.0000                 (X_U2.VFSW) 150.6E-06                     
+
+(N168069590)-598.5E-06                (X_U2.HS_ON)    0.0000                    
+
+(X_U2.LS_ON)    0.0000                (X_U2.RESET)    0.0000                    
+
+(X_U2.VSLPK) 19.80E-15                (X_U2.ACL_ON)    0.0000                   
+
+(X_U2.EN_INT)    0.0000               (X_U2.HS_OFF)    0.0000                   
+
+(X_U2.LS_OFF)    1.0000               (X_U2.SAMPLE)    0.0000                   
+
+(X_U2.UV_OUT)    1.0000               (X_U2.ZCD_BB)    1.0000                   
+
+(X_U2.BUCK_SS)    -.0100              (X_U2.DCM_ENB)    1.0000                  
+
+(X_U2.DRV_DIS)    1.0000              (X_U2.HIC_DIS)    0.0000                  
+
+(X_U2.MODE_OUT)    0.0000             (X_U2.CLK_RESET)    0.0000                
+
+(X_U2.MODE_OUTB)    1.0000            (X_U2.N16282299)    1.0000                
+
+(X_U2.N16759475)    1.0000            (X_U2.N16759612)    1.0000                
+
+(X_U2.N16776933)    0.0000            (X_U2.N16777549)    0.0000                
+
+(X_U2.N16842139)    1.0000            (X_U2.N16848312)    0.0000                
+
+(X_U2.N16901891)    1.0000            (X_U2.N16902371)    1.0000                
+
+(X_U2.N16907082)    1.0000            (X_U2.N16907593)    1.0000                
+
+(X_U2.N16922966)    1.0000            (X_U2.N16928089)    1.0000                
+
+(X_U2.N16928327)    1.0000            (X_U2.N17841333)    0.0000                
+
+(X_U2.PRE_LDRV1)    0.0000            (X_U2.PRE_LDRV2)    0.0000                
+
+(X_U2.COMP_GT_CL)    0.0000           (X_U2.CS_AMP_ENB)    1.0000               
+
+(X_U2.CS_AMP_SET)    1.0000           (X_U2.DCM_HS2_BB)    1.0000               
+
+(X_U2.MODE_STATE)    0.0000           (X_U2.UVLO_BOOT1)    1.0000               
+
+(X_U2.UVLO_BOOT2)    1.0000           (X_U2.CLK_RESET_B)    1.0000              
+
+(X_U2.SLOPE_RESET)    1.0000          (X_U2.SS_COMPLETE)    0.0000              
+
+(X_U2.CS_AMP_5XVCS)-578.5E-27         (X_U2.MIN_TIMER_IN)    1.0000             
+
+(X_U2.PWM_LOOP_BAR)    0.0000         (X_U2.VCC_REG_STBY)    0.0000             
+
+(X_U2.CS_AMP_VCL_SL)     .5000        (X_U2.CURRENT_LIMIT)    0.0000            
+
+(X_U2.DCM_N16776763)    0.0000        (X_U2.DCM_N16776811)    1.0000            
+
+(X_U2.DCM_N16777504)    1.0000        (X_U2.DCM_N16777543)    1.0000            
+
+(X_U2.DCM_N16777629)    1.0000        (X_U2.DCM_N16777973)    7.5000            
+
+(X_U2.DCM_N16779675)    0.0000        (X_U2.DCM_N16779821)    1.0000            
+
+(X_U2.DCM_N16779937)    1.0000        (X_U2.DCM_N16792892)    1.0000            
+
+(X_U2.DCM_N16799915)    1.0000        (X_U2.DCM_N16802077)    1.0000            
+
+(X_U2.DCM_N16802805)    1.0000        (X_U2.DCM_N16809464)    1.0000            
+
+(X_U2.DCM_N16824309)    1.0000        (X_U2.DCM_N16878857)    0.0000            
+
+(X_U2.DCM_N16909522)    3.0000        (X_U2.DCM_N16914270)    0.0000            
+
+(X_U2.DCM_N16917893)    1.0000        (X_U2.DCM_N16920048)    0.0000            
+
+(X_U2.DCM_N16920254)    0.0000        (X_U2.min_timer_ENB)    1.0000            
+
+(X_U2.MIN_TIMER_INB)    0.0000        (X_U2.min_timer_RES)    0.0000            
+
+(X_U2.min_timer_SET)    1.0000        (X_U2.OSC_N16673143) 300.6E-09            
+
+(X_U2.OSC_N16673175)    1.0000        (X_U2.OSC_N16673275)    1.0000            
+
+(X_U2.OSC_N16673361)    0.0000        (X_U2.OSC_N16673513)    5.0000            
+
+(X_U2.OSC_N16673551)    1.0000        (X_U2.OSC_N16673585)   10.0000            
+
+(X_U2.OSC_N16738540)    5.0000        (X_U2.OSC_N16739835)    5.0000            
+
+(X_U2.X_OSC_U136.ch)    1.0000        (X_U2.VOUT_GT_VIN_1V)    0.0000           
+
+(X_U2.BUCK_BOOST_MODE)    0.0000      (X_U2.CS_AMP_CL_LIMIT)     .5000          
+
+(X_U2.CS_AMP_N5085050)-578.5E-27      (X_U2.CS_AMP_N5085126) 578.5E-27          
+
+(X_U2.CS_AMP_OUT100NS)    0.0000      (X_U2.CS_AMP_OUT150NS)    0.0000          
+
+(X_U2.CS_AMP_PWM_PATH)    0.0000      (X_U2.CS_AMP_VCOMP_SL)   -1.7006          
+
+(X_U2.X_DCM_U828.YINT)    0.0000      (X_U2.X_DCM_U830.YINT)    0.0000          
+
+(X_U2.X_OSC_U131.Yint)    0.0000      (X_U2.X_OSC_U134.YINT)    1.0000          
+
+(X_U2.X_OSC_U135.YINT)    1.0000      (X_U2.X_OSC_U136.meas)    1.0000          
+
+(X_U2.X_OSC_U137.YINT)    1.0000      (X_U2.ZCD_BUCK_SIGNAL)    0.0000          
+
+(X_U2.CS_AMP_CLK_100NS)    0.0000     (X_U2.CS_AMP_N16764308)    0.0000         
+
+(X_U2.CS_AMP_N16764328)    0.0000     (X_U2.CS_AMP_N16832428)    1.0000         
+
+(X_U2.CS_AMP_N16832433)    1.0000     (X_U2.CS_AMP_N16838062)    1.0000         
+
+(X_U2.CS_AMP_N16841607)    0.0000     (X_U2.CS_AMP_N16841614)    0.0000         
+
+(X_U2.CS_AMP_N16841653)    0.0000     (X_U2.CS_AMP_N16841836)    0.0000         
+
+(X_U2.CS_AMP_N16841955)    1.0000     (X_U2.CS_AMP_N16842045)    0.0000         
+
+(X_U2.CS_AMP_N16842121)    0.0000     (X_U2.CS_AMP_N16846627)    0.0000         
+
+(X_U2.CS_AMP_N16848292)    1.0000     (X_U2.CS_AMP_N16905945)    1.0000         
+
+(X_U2.CS_AMP_N16907073)    0.0000     (X_U2.CS_AMP_N16907333)    1.0000         
+
+(X_U2.CS_AMP_N16907587)    0.0000     (X_U2.CS_AMP_N16907823)    0.0000         
+
+(X_U2.CS_AMP_N17091330)    0.0000     (X_U2.CS_AMP_N17091334)    0.0000         
+
+(X_U2.CS_AMP_N17091373)    1.0000     (X_U2.CS_AMP_N17212668)    0.0000         
+
+(X_U2.CS_AMP_N17525924)    1.0000     (X_U2.CS_AMP_N17525931)     .5000         
+
+(X_U2.CS_AMP_N17525937)     .4000     (X_U2.CS_AMP_N17575286)   -1.7006         
+
+(X_U2.CS_AMP_N17741067)     .0400     (X_U2.CS_AMP_N17840902)    0.0000         
+
+(X_U2.CS_AMP_N17840904) 8.316E-30     (X_U2.CS_AMP_N17840920)    0.0000         
+
+(X_U2.CS_AMP_N17840960)    1.0000     (X_U2.CS_AMP_N17841084)    0.0000         
+
+(X_U2.CS_AMP_N17841264)    1.0000     (X_U2.CS_AMP_N17841271)    1.0000         
+
+(X_U2.CS_AMP_N17841283)    1.0000     (X_U2.CS_AMP_N17841305)    1.0000         
+
+(X_U2.CS_AMP_N17841342)    1.0000     (X_U2.CS_AMP_N17884825)-500.7E-27         
+
+(X_U2.CS_AMP_N17884834)    0.0000     (X_U2.CS_AMP_N17884885)    1.0000         
+
+(X_U2.PGOOD_OVP_N00112)     .8800     (X_U2.PGOOD_OVP_N00126)     .7200         
+
+(X_U2.X_CS_AMP_U1.Yint)    1.0000     (X_U2.X_CS_AMP_U2.Yint)    0.0000         
+
+(X_U2.X_CS_AMP_U8.YINT)    1.0000     (X_U2.X_CS_AMP_U9.YINT)    0.0000         
+
+(X_U2.X_DCM_U827.YINT1)    0.0000     (X_U2.X_DCM_U827.YINT2)    0.0000         
+
+(X_U2.X_DCM_U827.YINT3)    1.0000     (X_U2.X_DCM_U829.YINT1)    0.0000         
+
+(X_U2.X_DCM_U829.YINT2)    0.0000     (X_U2.X_DCM_U829.YINT3)    1.0000         
+
+(X_U2.X_OSC_U132.YINT1)    1.0000     (X_U2.X_OSC_U132.YINT2)    1.0000         
+
+(X_U2.X_OSC_U132.YINT3)    0.0000     (X_U2.X_OSC_U133.YINT1)    0.0000         
+
+(X_U2.X_OSC_U133.YINT2)    0.0000     (X_U2.X_OSC_U133.YINT3)    1.0000         
+
+(X_U2.X_OSC_U136.reset)    0.0000     (X_U2.X_PGOOD_OVP_U5.1)    0.0000         
+
+(X_U2.BUCK_BOOST_MODE_B)    1.0000    (X_U2.CS_AMP_LD2_STATUS)    1.0000        
+
+(X_U2.CS_AMP_N167757052)    1.0000    (X_U2.CS_AMP_N167764052)    0.0000        
+
+(X_U2.current_limit_SET)    1.0000    (X_U2.Drivers_N16758767)    0.0000        
+
+(X_U2.Drivers_N16759768)    0.0000    (X_U2.Drivers_N16775793)    0.0000        
+
+(X_U2.Drivers_N16787552)    0.0000    (X_U2.Drivers_N16797448)    0.0000        
+
+(X_U2.Drivers_N16797453)    1.0000    (X_U2.Drivers_N16797604)    0.0000        
+
+(X_U2.Drivers_N16797699)    0.0000    (X_U2.Drivers_N16798534)    0.0000        
+
+(X_U2.Drivers_N16798559)    0.0000    (X_U2.Drivers_N16798562)    0.0000        
+
+(X_U2.Drivers_N16798615)    0.0000    (X_U2.Drivers_N16798623)    1.0000        
+
+(X_U2.Drivers_N16798765)    0.0000    (X_U2.Drivers_N16799006)    1.0000        
+
+(X_U2.Drivers_N16802369)    1.0000    (X_U2.Drivers_N16802471)    1.0000        
+
+(X_U2.Drivers_N16804514)    1.0000    (X_U2.Drivers_N16805692)    0.0000        
+
+(X_U2.Drivers_N16808380)    0.0000    (X_U2.Drivers_N16812942)    0.0000        
+
+(X_U2.Drivers_N16816675)     .2800    (X_U2.Drivers_N16816977)     .2800        
+
+(X_U2.Drivers_N16859838)    3.0000    (X_U2.Drivers_N16860814) 244.0E-24        
+
+(X_U2.Drivers_N16866880)    3.0000    (X_U2.Drivers_N16867498) 39.70E-24        
+
+(X_U2.Drivers_PRE_HDRV1)    0.0000    (X_U2.Drivers_PRE_HDRV2)    0.0000        
+
+(X_U2.UVLO_BT1_DETECTED)    0.0000    (X_U2.VCC_REG_N16764625)-89.87E-12        
+
+(X_U2.VCC_REG_N16764709)    3.3000    (X_U2.VCC_REG_N16764761)    3.3000        
+
+(X_U2.VCC_REG_N16764767)    1.0000    (X_U2.VCC_REG_N16764827)    0.0000        
+
+(X_U2.VCC_REG_N16764877)     .7000    (X_U2.VCC_REG_N16765003)    1.2200        
+
+(X_U2.VCC_REG_N16765009)    0.0000    (X_U2.VCC_REG_N16765121)    0.0000        
+
+(X_U2.VCC_REG_N16765253)    8.0000    (X_U2.VCC_REG_N16765297)    0.0000        
+
+(X_U2.VCC_REG_N16765307)    0.0000    (X_U2.X_CS_AMP_U643.my5)    5.0000        
+
+(X_U2.X_CS_AMP_U643.qbr)    1.0000    (X_U2.X_CS_AMP_U643.qqq)    -.0100        
+
+(X_U2.X_CS_AMP_U679.MY5)    1.0000    (X_U2.X_CS_AMP_U679.Qbr)    1.0000        
+
+(X_U2.X_CS_AMP_U679.Qqq) 2.002E-15    (X_U2.X_CS_AMP_U717.MY5)    1.0000        
+
+(X_U2.X_CS_AMP_U717.Qbr)    1.0000    (X_U2.X_CS_AMP_U717.Qqq)    -.0100        
+
+(X_U2.X_CS_AMP_U731.MY5)    1.0000    (X_U2.X_CS_AMP_U731.Qbr)    1.0000        
+
+(X_U2.X_CS_AMP_U731.Qqq) 2.002E-15    (X_U2.X_OSC_U136.reset2)    0.0000        
+
+(X_U2.X_VCC_REG_U6.YINT)    0.0000    (X_U2.current_limit_SHDN)    1.0000       
+
+(X_U2.min_timer_NOT_USED)    0.0000   (X_U2.PGOOD_OVP_NO_PGOOD)    1.0000       
+
+(X_U2.PWM_COMPARATOR_OUT)    0.0000   (X_U2.X_CS_AMP_U643.qint)    -.0100       
+
+(X_U2.X_CS_AMP_U670.YINT)    0.0000   (X_U2.X_CS_AMP_U672.YINT)    0.0000       
+
+(X_U2.X_CS_AMP_U674.YINT)    0.0000   (X_U2.X_CS_AMP_U679.Qint) 2.002E-15       
+
+(X_U2.X_CS_AMP_U681.YINT)    0.0000   (X_U2.X_CS_AMP_U682.YINT)    0.0000       
+
+(X_U2.X_CS_AMP_U685.YINT)    1.0000   (X_U2.X_CS_AMP_U686.YINT)    1.0000       
+
+(X_U2.X_CS_AMP_U687.YINT)    1.0000   (X_U2.X_CS_AMP_U688.YINT)    1.0000       
+
+(X_U2.X_CS_AMP_U691.YINT)    1.0000   (X_U2.X_CS_AMP_U694.YINT)    0.0000       
+
+(X_U2.X_CS_AMP_U695.YINT)    1.0000   (X_U2.X_CS_AMP_U698.YINT)    0.0000       
+
+(X_U2.X_CS_AMP_U699.YINT)    1.0000   (X_U2.X_CS_AMP_U704.YINT)    0.0000       
+
+(X_U2.X_CS_AMP_U706.YINT)    1.0000   (X_U2.X_CS_AMP_U713.YINT)    0.0000       
+
+(X_U2.X_CS_AMP_U714.YINT)    0.0000   (X_U2.X_CS_AMP_U715.YINT)    0.0000       
+
+(X_U2.X_CS_AMP_U717.Qint)    -.0100   (X_U2.X_CS_AMP_U718.YINT)    1.0000       
+
+(X_U2.X_CS_AMP_U719.YINT)    1.0000   (X_U2.X_CS_AMP_U721.YINT)    0.0000       
+
+(X_U2.X_CS_AMP_U722.YINT)    0.0000   (X_U2.X_CS_AMP_U724.YINT)    0.0000       
+
+(X_U2.X_CS_AMP_U727.YINT)    1.0000   (X_U2.X_CS_AMP_U728.Yint)    0.0000       
+
+(X_U2.X_CS_AMP_U730.YINT)    1.0000   (X_U2.X_CS_AMP_U731.Qint) 2.002E-15       
+
+(X_U2.X_CS_AMP_U732.YINT)    1.0000   (X_U2.X_CS_AMP_U733.YINT)    0.0000       
+
+(X_U2.X_CS_AMP_U735.YINT)    1.0000   (X_U2.X_CS_AMP_U736.YINT)    0.0000       
+
+(X_U2.X_CS_AMP_U739.YINT)    1.0000   (X_U2.X_CS_AMP_U823.YINT)    0.0000       
+
+(X_U2.X_CS_AMP_U825.YINT)    0.0000   (X_U2.X_CS_AMP_U830.YINT)    0.0000       
+
+(X_U2.current_limit_H_END)    0.0000  (X_U2.DCM_ZEROCROSS_BOOST)    1.0000      
+
+(X_U2.Drivers_UVLOB_BOOT1)    0.0000  (X_U2.Drivers_UVLOB_BOOT2)    0.0000      
+
+(X_U2.min_timer_N16901477)    1.0000  (X_U2.min_timer_N16901605)    0.0000      
+
+(X_U2.min_timer_N16901664)    1.0000  (X_U2.min_timer_N16901668)    0.0000      
+
+(X_U2.min_timer_N16901687)-15.82E-21  (X_U2.min_timer_N16901716)    1.0000      
+
+(X_U2.min_timer_N16901814)    0.0000  (X_U2.min_timer_N16901827)    1.0000      
+
+(X_U2.min_timer_N16901917)    0.0000  (X_U2.min_timer_N16901963)    0.0000      
+
+(X_U2.min_timer_N16902128)    0.0000  (X_U2.min_timer_N16922795)    0.0000      
+
+(X_U2.min_timer_N16923783)    0.0000  (X_U2.min_timer_N16926621)    1.0000      
+
+(X_U2.min_timer_N16927710)    0.0000  (X_U2.min_timer_N16928522)    0.0000      
+
+(X_U2.PGOOD_OVP_N16769754)    0.0000  (X_U2.PGOOD_OVP_N16769766)    1.0000      
+
+(X_U2.PGOOD_OVP_N16769927)     .8800  (X_U2.PGOOD_OVP_N16770999)     .0200      
+
+(X_U2.PWM_COMPARATOR_OUTB)    1.0000  (X_U2.Sample_Hold_VSL_INT) 19.80E-15      
+
+(X_U2.X_CS_AMP_U643.qqqd1)    0.0000  (X_U2.X_CS_AMP_U679.MYVSS)    0.0000      
+
+(X_U2.X_CS_AMP_U696.YINT1)    1.0000  (X_U2.X_CS_AMP_U696.YINT2)    1.0000      
+
+(X_U2.X_CS_AMP_U696.YINT3)    1.0000  (X_U2.X_CS_AMP_U697.YINT1)    1.0000      
+
+(X_U2.X_CS_AMP_U697.YINT2)    1.0000  (X_U2.X_CS_AMP_U697.YINT3)    1.0000      
+
+(X_U2.X_CS_AMP_U717.MYVSS)    0.0000  (X_U2.X_CS_AMP_U731.MYVSS)    0.0000      
+
+(X_U2.X_CS_AMP_U822.YINT1)    0.0000  (X_U2.X_CS_AMP_U822.YINT2)    0.0000      
+
+(X_U2.X_CS_AMP_U822.YINT3)    1.0000  (X_U2.X_CS_AMP_U824.YINT1)    0.0000      
+
+(X_U2.X_CS_AMP_U824.YINT2)    0.0000  (X_U2.X_CS_AMP_U824.YINT3)    1.0000      
+
+(X_U2.X_CS_AMP_U829.YINT1)    0.0000  (X_U2.X_CS_AMP_U829.YINT2)    0.0000      
+
+(X_U2.X_CS_AMP_U829.YINT3)    1.0000  (X_U2.X_min_timer_U7.YINT)    0.0000      
+
+(X_U2.X_PGOOD_OVP_U1.Yint)    0.0000  (X_U2.X_PGOOD_OVP_U2.Yint)    1.0000      
+
+(X_U2.X_PGOOD_OVP_U3.YINT)    1.0000  (X_U2.X_PGOOD_OVP_U5.INM1)     .8800      
+
+(X_U2.X_PGOOD_OVP_U5.INP1)    0.0000  (X_U2.X_PGOOD_OVP_U5.INP2)    0.0000      
+
+(X_U2.X_VCC_REG_U604.YINT)    0.0000  (X_U2.X_VCC_REG_U605.Yint)    1.0000      
+
+(X_U2.X_VCC_REG_U606.Yint)    0.0000  (X_U2.X_VCC_REG_U607.YINT)    0.0000      
+
+(X_U2.X_VCC_REG_U608.YINT)    0.0000  (X_U2.X_VCC_REG_U611.YINT)-89.87E-12      
+
+(X_U2.X_VCC_REG_U612.Yint)    1.0000  (X_U2.X_VCC_REG_U613.Yint)    0.0000      
+
+(X_U2.current_limit_HICCUP)    0.0000 (X_U2.min_timer_INPUT1P2US)    0.0000     
+
+(X_U2.Slope_Comp_N16720003)    3.3000 (X_U2.Slope_Comp_N16766844)    1.0000     
+
+(X_U2.Slope_Comp_N16783181)    1.0000 (X_U2.Slope_Comp_N16810977)    1.0000     
+
+(X_U2.Slope_Comp_N16812058)    0.0000 (X_U2.X_CS_AMP_U643.clkdel)    0.0000     
+
+(X_U2.X_CS_AMP_U643.clkint)    0.0000 (X_U2.X_min_timer_U650.my5)    5.0000     
+
+(X_U2.X_min_timer_U650.qbr)    1.0000 (X_U2.X_min_timer_U650.qqq)    -.0100     
+
+(X_U2.X_min_timer_U652.my5)    5.0000 (X_U2.X_min_timer_U652.qbr)    1.0000     
+
+(X_U2.X_min_timer_U652.qqq)    -.0100 (X_U2.X_min_timer_U653.my5)    5.0000     
+
+(X_U2.X_min_timer_U653.qbr)    1.0000 (X_U2.X_min_timer_U653.qqq) 10.00E-15     
+
+(X_U2.X_min_timer_U654.my5)    5.0000 (X_U2.X_min_timer_U654.qbr)    1.0000     
+
+(X_U2.X_min_timer_U654.qqq) 10.00E-15 (X_U2.X_min_timer_U829.my5)    1.0000     
+
+(X_U2.X_min_timer_U829.qbr)    1.0000 (X_U2.X_min_timer_U829.qqq)    -.0096     
+
+(X_U2.X_min_timer_U831.MY5)    1.0000 (X_U2.X_min_timer_U831.Qbr)    1.0000     
+
+(X_U2.X_min_timer_U831.Qqq) 2.002E-15 (X_U2.CS_AMP_CURRENT_LIMITB)    1.0000    
+
+(X_U2.CS_AMP_PWM_RESET_MASK)    1.0000                                          
+
+(X_U2.min_timer_OUTPUT1P2US)    1.0000                                          
+
+(X_U2.Sample_Hold_N16829120)    0.0000                                          
+
+(X_U2.Sample_Hold_N16830005)    0.0000                                          
+
+(X_U2.X_CS_AMP_U643.x2.YINT)    0.0000                                          
+
+(X_U2.X_CS_AMP_U679.X3.YINT)    0.0000                                          
+
+(X_U2.X_CS_AMP_U717.X3.YINT)    0.0000                                          
+
+(X_U2.X_CS_AMP_U731.X3.YINT)    0.0000                                          
+
+(X_U2.X_DCM_U1912603689.MY5)    1.0000                                          
+
+(X_U2.X_DCM_U1912603689.Qbr)    1.0000                                          
+
+(X_U2.X_DCM_U1912603689.Qqq)     .0100                                          
+
+(X_U2.X_DCM_U1912603696.MY5)    1.0000                                          
+
+(X_U2.X_DCM_U1912603696.Qbr)    1.0000                                          
+
+(X_U2.X_DCM_U1912603696.Qqq)     .0100                                          
+
+(X_U2.X_min_timer_U645.YINT)    1.0000                                          
+
+(X_U2.X_min_timer_U650.qint)    -.0100                                          
+
+(X_U2.X_min_timer_U651.YINT)    0.0000                                          
+
+(X_U2.X_min_timer_U652.qint)    -.0100                                          
+
+(X_U2.X_min_timer_U653.qint) 10.00E-15                                          
+
+(X_U2.X_min_timer_U654.qint) 10.00E-15                                          
+
+(X_U2.X_min_timer_U655.YINT)    0.0000                                          
+
+(X_U2.X_min_timer_U689.YINT)    1.0000                                          
+
+(X_U2.X_min_timer_U690.YINT)    0.0000                                          
+
+(X_U2.X_min_timer_U692.YINT)    0.0000                                          
+
+(X_U2.X_min_timer_U693.YINT)    1.0000                                          
+
+(X_U2.X_min_timer_U694.YINT)    0.0000                                          
+
+(X_U2.X_min_timer_U696.YINT)    0.0000                                          
+
+(X_U2.X_min_timer_U823.YINT)    0.0000                                          
+
+(X_U2.X_min_timer_U826.YINT)    1.0000                                          
+
+(X_U2.X_min_timer_U828.YINT)    0.0000                                          
+
+(X_U2.X_min_timer_U829.qint)    -.0096                                          
+
+(X_U2.X_min_timer_U830.YINT)    0.0000                                          
+
+(X_U2.X_min_timer_U831.Qint) 2.002E-15                                          
+
+(X_U2.X_min_timer_U833.YINT)    1.0000                                          
+
+(X_U2.X_Sample_Hold_U1.YINT)    0.0000                                          
+
+(X_U2.X_Sample_Hold_U2.YINT)    0.0000                                          
+
+(X_U2.current_limit_HICCUP_N)    1.0000                                         
+
+(X_U2.EA_SS_CCLOOP_N16151810)    1.2200                                         
+
+(X_U2.EA_SS_CCLOOP_N16151836)    -.0100                                         
+
+(X_U2.EA_SS_CCLOOP_N16737187)    3.3000                                         
+
+(X_U2.EA_SS_CCLOOP_N16738178) 7.208E-15                                         
+
+(X_U2.EA_SS_CCLOOP_N16783515)    1.0000                                         
+
+(X_U2.EA_SS_CCLOOP_N16783983)    1.0000                                         
+
+(X_U2.EA_SS_CCLOOP_N16832689)    0.0000                                         
+
+(X_U2.Sample_Hold_VSLPK_BUCK) 19.80E-15                                         
+
+(X_U2.X_CS_AMP_U643.x1.YINT1)    1.0000                                         
+
+(X_U2.X_CS_AMP_U643.x1.YINT2)    1.0000                                         
+
+(X_U2.X_CS_AMP_U643.x1.YINT3)    0.0000                                         
+
+(X_U2.X_CS_AMP_U643.x3.YINT1)    0.0000                                         
+
+(X_U2.X_CS_AMP_U643.x3.YINT2)    0.0000                                         
+
+(X_U2.X_CS_AMP_U643.x3.YINT3)    0.0000                                         
+
+(X_U2.X_DCM_U1912603662.YINT)    0.0000                                         
+
+(X_U2.X_DCM_U1912603666.YINT)    1.0000                                         
+
+(X_U2.X_DCM_U1912603671.YINT)    1.0000                                         
+
+(X_U2.X_DCM_U1912603675.YINT)    1.0000                                         
+
+(X_U2.X_DCM_U1912603679.YINT)    0.0000                                         
+
+(X_U2.X_DCM_U1912603680.YINT)    1.0000                                         
+
+(X_U2.X_DCM_U1912603684.YINT)    1.0000                                         
+
+(X_U2.X_DCM_U1912603687.YINT)    1.0000                                         
+
+(X_U2.X_DCM_U1912603689.Qint)     .0100                                         
+
+(X_U2.X_DCM_U1912603692.YINT)    1.0000                                         
+
+(X_U2.X_DCM_U1912603693.YINT)    1.0000                                         
+
+(X_U2.X_DCM_U1912603695.YINT)    1.0000                                         
+
+(X_U2.X_DCM_U1912603696.Qint)     .0100                                         
+
+(X_U2.X_DCM_U1912603697.YINT)    1.0000                                         
+
+(X_U2.X_DCM_U1912603702.YINT)    1.0000                                         
+
+(X_U2.X_DCM_U1912603717.Yint)    0.0000                                         
+
+(X_U2.X_DCM_U1912603719.YINT)    1.0000                                         
+
+(X_U2.X_DCM_U1912603720.YINT)    0.0000                                         
+
+(X_U2.X_DCM_U1912603721.YINT)    0.0000                                         
+
+(X_U2.X_DCM_U1912603722.YINT)    0.0000                                         
+
+(X_U2.X_EA_SS_CCLOOP_U2.YINT)    1.0000                                         
+
+(X_U2.X_EA_SS_CCLOOP_U3.YINT)    1.0000                                         
+
+(X_U2.X_EA_SS_CCLOOP_U4.YINT)    0.0000                                         
+
+(X_U2.X_EA_SS_CCLOOP_U5.YINT)    0.0000                                         
+
+(X_U2.X_min_timer_U149.YINT1)    0.0000                                         
+
+(X_U2.X_min_timer_U149.YINT2)    0.0000                                         
+
+(X_U2.X_min_timer_U149.YINT3)    0.0000                                         
+
+(X_U2.X_min_timer_U650.qqqd1)    0.0000                                         
+
+(X_U2.X_min_timer_U652.qqqd1)    0.0000                                         
+
+(X_U2.X_min_timer_U653.qqqd1)    0.0000                                         
+
+(X_U2.X_min_timer_U654.qqqd1)    0.0000                                         
+
+(X_U2.X_min_timer_U685.YINT1)    0.0000                                         
+
+(X_U2.X_min_timer_U685.YINT2)    0.0000                                         
+
+(X_U2.X_min_timer_U685.YINT3)    0.0000                                         
+
+(X_U2.X_min_timer_U822.YINT1)    0.0000                                         
+
+(X_U2.X_min_timer_U822.YINT2)    0.0000                                         
+
+(X_U2.X_min_timer_U822.YINT3)    1.0000                                         
+
+(X_U2.X_min_timer_U827.YINT1)    0.0000                                         
+
+(X_U2.X_min_timer_U827.YINT2)    0.0000                                         
+
+(X_U2.X_min_timer_U827.YINT3)    1.0000                                         
+
+(X_U2.X_min_timer_U829.myvss)    0.0000                                         
+
+(X_U2.X_min_timer_U831.MYVSS)    0.0000                                         
+
+(X_U2.X_min_timer_U831.Qqqd1)    0.0000                                         
+
+(X_U2.X_min_timer_U832.YINT1)    0.0000                                         
+
+(X_U2.X_min_timer_U832.YINT2)    0.0000                                         
+
+(X_U2.X_min_timer_U832.YINT3)    0.0000                                         
+
+(X_U2.X_Slope_Comp_U690.YINT)    1.0000                                         
+
+(X_U2.X_Slope_Comp_U691.YINT)    0.0000                                         
+
+(X_U2.X_Slope_Comp_U701.YINT)    1.0000                                         
+
+(X_U2.X_Slope_Comp_U704.YINT)    0.0000                                         
+
+(X_U2.current_limit_N16759254)    0.0000                                        
+
+(X_U2.current_limit_N16759449)    1.0000                                        
+
+(X_U2.current_limit_N16759550)    0.0000                                        
+
+(X_U2.current_limit_N16760059)    0.0000                                        
+
+(X_U2.current_limit_N16764480)    1.0000                                        
+
+(X_U2.current_limit_N16764798)    1.0000                                        
+
+(X_U2.current_limit_N16779506)    0.0000                                        
+
+(X_U2.current_limit_N16827918)    0.0000                                        
+
+(X_U2.current_limit_N16827950)    1.0000                                        
+
+(X_U2.current_limit_N16827955)    0.0000                                        
+
+(X_U2.current_limit_N16827978)    0.0000                                        
+
+(X_U2.current_limit_N16827984)    0.0000                                        
+
+(X_U2.current_limit_N16827988)  128.0000                                        
+
+(X_U2.current_limit_N16828013)    0.0000                                        
+
+(X_U2.current_limit_N16828021)    1.0000                                        
+
+(X_U2.current_limit_N16828058)    1.0000                                        
+
+(X_U2.current_limit_N16829151)    0.0000                                        
+
+(X_U2.current_limit_N16829185)    1.0000                                        
+
+(X_U2.current_limit_N16829190)    0.0000                                        
+
+(X_U2.current_limit_N16829205)    0.0000                                        
+
+(X_U2.current_limit_N16829209) 3968.0000                                        
+
+(X_U2.current_limit_N16829234)    0.0000                                        
+
+(X_U2.current_limit_N16829242)    1.0000                                        
+
+(X_U2.current_limit_N16829266)    1.0000                                        
+
+(X_U2.current_limit_N16854375)    0.0000                                        
+
+(X_U2.current_limit_N16854604)    0.0000                                        
+
+(X_U2.current_limit_N16854836)    0.0000                                        
+
+(X_U2.min_timer_PULSE_BB_TRAN)    0.0000                                        
+
+(X_U2.Sample_Hold_VSLPK_BOOST) 19.80E-15                                        
+
+(X_U2.X_current_limit_U31.my5)    1.0000                                        
+
+(X_U2.X_current_limit_U31.qbr)    1.0000                                        
+
+(X_U2.X_current_limit_U31.qqq) 2.002E-15                                        
+
+(X_U2.X_DCM_U1912603689.MYVSS)    0.0000                                        
+
+(X_U2.X_DCM_U1912603696.MYVSS)    0.0000                                        
+
+(X_U2.X_Drivers_U1912603705.1)    1.0000                                        
+
+(X_U2.X_Drivers_U1912603707.1)    1.0000                                        
+
+(X_U2.X_min_timer_U650.clkdel)    1.0000                                        
+
+(X_U2.X_min_timer_U650.clkint)    0.0000                                        
+
+(X_U2.X_min_timer_U652.clkdel)    1.0000                                        
+
+(X_U2.X_min_timer_U652.clkint)    0.0000                                        
+
+(X_U2.X_min_timer_U653.clkdel)    1.0000                                        
+
+(X_U2.X_min_timer_U653.clkint)    0.0000                                        
+
+(X_U2.X_min_timer_U654.clkdel)    1.0000                                        
+
+(X_U2.X_min_timer_U654.clkint)    0.0000                                        
+
+(X_U2.X_min_timer_U831.CLKdel)    1.0000                                        
+
+(X_U2.X_min_timer_U831.CLKint)    0.0000                                        
+
+(X_U2.X_Slope_Comp_U702.YINT1)    1.0000                                        
+
+(X_U2.X_Slope_Comp_U702.YINT2)    1.0000                                        
+
+(X_U2.X_Slope_Comp_U702.YINT3)    1.0000                                        
+
+(X_U2.X_Slope_Comp_U703.YINT1)    1.0000                                        
+
+(X_U2.X_Slope_Comp_U703.YINT2)    1.0000                                        
+
+(X_U2.X_Slope_Comp_U703.YINT3)    1.0000                                        
+
+(X_U2.CS_AMP_NEG_CURRENT_LIMIT)    0.0000                                       
+
+(X_U2.CS_AMP_UVLO_BT2_DETECTED)    0.0000                                       
+
+(X_U2.min_timer_PULSE_GT_1P2US)    0.0000                                       
+
+(X_U2.X_CS_AMP_U1912603712.my5)    5.0000                                       
+
+(X_U2.X_CS_AMP_U1912603712.qbr)    1.0000                                       
+
+(X_U2.X_CS_AMP_U1912603712.qqq)    -.0100                                       
+
+(X_U2.X_CS_AMP_U1912603719.my5)    5.0000                                       
+
+(X_U2.X_CS_AMP_U1912603719.qbr)    1.0000                                       
+
+(X_U2.X_CS_AMP_U1912603719.qqq)    -.0100                                       
+
+(X_U2.X_current_limit_U31.qint) 2.002E-15                                       
+
+(X_U2.X_current_limit_U643.my5)    5.0000                                       
+
+(X_U2.X_current_limit_U643.qbr)    1.0000                                       
+
+(X_U2.X_current_limit_U643.qqq)    -.0100                                       
+
+(X_U2.X_current_limit_U652.MY5)    1.0000                                       
+
+(X_U2.X_current_limit_U652.Qbr)    1.0000                                       
+
+(X_U2.X_current_limit_U652.Qqq)    -.0100                                       
+
+(X_U2.X_min_timer_U650.x2.YINT)    0.0000                                       
+
+(X_U2.X_min_timer_U652.x2.YINT)    0.0000                                       
+
+(X_U2.X_min_timer_U653.x2.YINT)    0.0000                                       
+
+(X_U2.X_min_timer_U654.x2.YINT)    0.0000                                       
+
+(X_U2.X_min_timer_U829.x3.YINT)    0.0000                                       
+
+(X_U2.X_min_timer_U831.X2.YINT)    0.0000                                       
+
+(X_U2.min_timer_CLK_RESET_PULSE)    0.0000                                      
+
+(X_U2.X_CS_AMP_U1912603712.qint)    -.0100                                      
+
+(X_U2.X_CS_AMP_U1912603713.YINT)    0.0000                                      
+
+(X_U2.X_CS_AMP_U1912603719.qint)    -.0100                                      
+
+(X_U2.X_CS_AMP_U1912603723.YINT)    0.0000                                      
+
+(X_U2.X_CS_AMP_U1912603724.YINT)    1.0000                                      
+
+(X_U2.X_CS_AMP_U1912603725.YINT)    0.0000                                      
+
+(X_U2.X_CS_AMP_U1912603726.YINT)    0.0000                                      
+
+(X_U2.X_CS_AMP_U1912603727.YINT)    0.0000                                      
+
+(X_U2.X_CS_AMP_U1912603728.YINT)    0.0000                                      
+
+(X_U2.X_CS_AMP_U1912603729.YINT)    0.0000                                      
+
+(X_U2.X_current_limit_U31.myvss)    0.0000                                      
+
+(X_U2.X_current_limit_U611.YINT)    0.0000                                      
+
+(X_U2.X_current_limit_U612.Yint)    0.0000                                      
+
+(X_U2.X_current_limit_U616.YINT)    0.0000                                      
+
+(X_U2.X_current_limit_U619.YINT)    1.0000                                      
+
+(X_U2.X_current_limit_U620.YINT)    0.0000                                      
+
+(X_U2.X_current_limit_U621.YINT)    1.0000                                      
+
+(X_U2.X_current_limit_U622.Yint)    0.0000                                      
+
+(X_U2.X_current_limit_U643.qint)    -.0100                                      
+
+(X_U2.X_current_limit_U648.YINT)    0.0000                                      
+
+(X_U2.X_current_limit_U649.YINT)    1.0000                                      
+
+(X_U2.X_current_limit_U651.YINT)    1.0000                                      
+
+(X_U2.X_current_limit_U652.Qint)    -.0100                                      
+
+(X_U2.X_current_limit_U656.YINT)    1.0000                                      
+
+(X_U2.X_current_limit_U657.YINT)    1.0000                                      
+
+(X_U2.X_current_limit_U658.YINT)    1.0000                                      
+
+(X_U2.X_current_limit_U659.YINT)    1.0000                                      
+
+(X_U2.X_current_limit_U660.YINT)    1.0000                                      
+
+(X_U2.X_current_limit_U661.YINT)    0.0000                                      
+
+(X_U2.X_current_limit_U662.YINT)    0.0000                                      
+
+(X_U2.X_current_limit_U828.YINT)    0.0000                                      
+
+(X_U2.X_current_limit_U829.YINT)    0.0000                                      
+
+(X_U2.X_DCM_U1912603689.X3.YINT)    0.0000                                      
+
+(X_U2.X_DCM_U1912603696.X3.YINT)    0.0000                                      
+
+(X_U2.X_min_timer_U650.x1.YINT1)    0.0000                                      
+
+(X_U2.X_min_timer_U650.x1.YINT2)    0.0000                                      
+
+(X_U2.X_min_timer_U650.x1.YINT3)    1.0000                                      
+
+(X_U2.X_min_timer_U650.x3.YINT1)    0.0000                                      
+
+(X_U2.X_min_timer_U650.x3.YINT2)    0.0000                                      
+
+(X_U2.X_min_timer_U650.x3.YINT3)    0.0000                                      
+
+(X_U2.X_min_timer_U652.x1.YINT1)    0.0000                                      
+
+(X_U2.X_min_timer_U652.x1.YINT2)    0.0000                                      
+
+(X_U2.X_min_timer_U652.x1.YINT3)    1.0000                                      
+
+(X_U2.X_min_timer_U652.x3.YINT1)    0.0000                                      
+
+(X_U2.X_min_timer_U652.x3.YINT2)    0.0000                                      
+
+(X_U2.X_min_timer_U652.x3.YINT3)    0.0000                                      
+
+(X_U2.X_min_timer_U653.x1.YINT1)    0.0000                                      
+
+(X_U2.X_min_timer_U653.x1.YINT2)    0.0000                                      
+
+(X_U2.X_min_timer_U653.x1.YINT3)    1.0000                                      
+
+(X_U2.X_min_timer_U653.x3.YINT1)    0.0000                                      
+
+(X_U2.X_min_timer_U653.x3.YINT2)    0.0000                                      
+
+(X_U2.X_min_timer_U653.x3.YINT3)    0.0000                                      
+
+(X_U2.X_min_timer_U654.x1.YINT1)    0.0000                                      
+
+(X_U2.X_min_timer_U654.x1.YINT2)    0.0000                                      
+
+(X_U2.X_min_timer_U654.x1.YINT3)    1.0000                                      
+
+(X_U2.X_min_timer_U654.x3.YINT1)    0.0000                                      
+
+(X_U2.X_min_timer_U654.x3.YINT2)    0.0000                                      
+
+(X_U2.X_min_timer_U654.x3.YINT3)    0.0000                                      
+
+(X_U2.X_min_timer_U831.X1.YINT1)    0.0000                                      
+
+(X_U2.X_min_timer_U831.X1.YINT2)    0.0000                                      
+
+(X_U2.X_min_timer_U831.X1.YINT3)    1.0000                                      
+
+(X_U2.X_min_timer_U831.X3.YINT1)    0.0000                                      
+
+(X_U2.X_min_timer_U831.X3.YINT2)    0.0000                                      
+
+(X_U2.X_min_timer_U831.X3.YINT3)    0.0000                                      
+
+(X_U2.CS_AMP_LD1_STATUSB_OR_ZCDB)    1.0000                                     
+
+(X_U2.min_timer_LDRVX_LT_BB_TRAN)    0.0000                                     
+
+(X_U2.min_timer_min_on_N16772126)    0.0000                                     
+
+(X_U2.min_timer_min_on_N16772328)    1.0000                                     
+
+(X_U2.min_timer_PULSE_LT_BB_TRAN)    0.0000                                     
+
+(X_U2.X_CS_AMP_U1912603712.qqqd1)    0.0000                                     
+
+(X_U2.X_CS_AMP_U1912603719.qqqd1)    0.0000                                     
+
+(X_U2.X_current_limit_U610.YINT1)    0.0000                                     
+
+(X_U2.X_current_limit_U610.YINT2)    0.0000                                     
+
+(X_U2.X_current_limit_U610.YINT3)    1.0000                                     
+
+(X_U2.X_current_limit_U615.YINT1)    0.0000                                     
+
+(X_U2.X_current_limit_U615.YINT2)    0.0000                                     
+
+(X_U2.X_current_limit_U615.YINT3)    1.0000                                     
+
+(X_U2.X_current_limit_U643.qqqd1)    0.0000                                     
+
+(X_U2.X_current_limit_U652.MYVSS)    0.0000                                     
+
+(X_U2.X_current_limit_U827.YINT1)    1.0000                                     
+
+(X_U2.X_current_limit_U827.YINT2)    1.0000                                     
+
+(X_U2.X_current_limit_U827.YINT3)    0.0000                                     
+
+(X_U2.X_Drivers_U1912603652.YINT)    0.0000                                     
+
+(X_U2.X_Drivers_U1912603654.YINT)    0.0000                                     
+
+(X_U2.X_Drivers_U1912603659.YINT)    0.0000                                     
+
+(X_U2.X_Drivers_U1912603660.YINT)    1.0000                                     
+
+(X_U2.X_Drivers_U1912603661.YINT)    0.0000                                     
+
+(X_U2.X_Drivers_U1912603662.YINT)    0.0000                                     
+
+(X_U2.X_Drivers_U1912603663.YINT)    0.0000                                     
+
+(X_U2.X_Drivers_U1912603665.YINT)    0.0000                                     
+
+(X_U2.X_Drivers_U1912603667.YINT)    0.0000                                     
+
+(X_U2.X_Drivers_U1912603669.YINT)    0.0000                                     
+
+(X_U2.X_Drivers_U1912603670.YINT)    0.0000                                     
+
+(X_U2.X_Drivers_U1912603672.YINT)    0.0000                                     
+
+(X_U2.X_Drivers_U1912603674.YINT)    0.0000                                     
+
+(X_U2.X_Drivers_U1912603675.YINT)    1.0000                                     
+
+(X_U2.X_Drivers_U1912603677.YINT)    0.0000                                     
+
+(X_U2.X_Drivers_U1912603705.INM1)   -3.0000                                     
+
+(X_U2.X_Drivers_U1912603705.INP1)    0.0000                                     
+
+(X_U2.X_Drivers_U1912603705.INP2)     .2800                                     
+
+(X_U2.X_Drivers_U1912603706.YINT)    0.0000                                     
+
+(X_U2.X_Drivers_U1912603707.INM1)   -3.0000                                     
+
+(X_U2.X_Drivers_U1912603707.INP1)    0.0000                                     
+
+(X_U2.X_Drivers_U1912603707.INP2)     .2800                                     
+
+(X_U2.X_Drivers_U1912603708.YINT)    0.0000                                     
+
+(X_U2.X_Drivers_U1912603709.YINT)    0.0000                                     
+
+(X_U2.X_Drivers_U1912603713.YINT)    0.0000                                     
+
+(X_U2.CS_AMP_EN_UVLO_REFRESH_BUCK)    0.0000                                    
+
+(X_U2.min_timer_min_on_INDELAYED1)-6.328E-18                                    
+
+(X_U2.X_CS_AMP_U1912603712.clkdel)    1.0000                                    
+
+(X_U2.X_CS_AMP_U1912603712.clkint)    0.0000                                    
+
+(X_U2.X_CS_AMP_U1912603719.clkdel)    1.0000                                    
+
+(X_U2.X_CS_AMP_U1912603719.clkint)    0.0000                                    
+
+(X_U2.X_current_limit_U31.x3.YINT)    0.0000                                    
+
+(X_U2.X_current_limit_U643.clkdel)    1.0000                                    
+
+(X_U2.X_current_limit_U643.clkint)    0.0000                                    
+
+(X_U2.X_Drivers_U1912603678.YINT1)    0.0000                                    
+
+(X_U2.X_Drivers_U1912603678.YINT2)    0.0000                                    
+
+(X_U2.X_Drivers_U1912603678.YINT3)    1.0000                                    
+
+(X_U2.X_Drivers_U1912603679.YINT1)    0.0000                                    
+
+(X_U2.X_Drivers_U1912603679.YINT2)    0.0000                                    
+
+(X_U2.X_Drivers_U1912603679.YINT3)    1.0000                                    
+
+(X_U2.X_Drivers_U1912603680.YINT1)    0.0000                                    
+
+(X_U2.X_Drivers_U1912603680.YINT2)    0.0000                                    
+
+(X_U2.X_Drivers_U1912603680.YINT3)    1.0000                                    
+
+(X_U2.X_Drivers_U1912603681.YINT1)    0.0000                                    
+
+(X_U2.X_Drivers_U1912603681.YINT2)    0.0000                                    
+
+(X_U2.X_Drivers_U1912603681.YINT3)    1.0000                                    
+
+(X_U2.CS_AMP_EN_UVLO_REFRESH_BOOST)    0.0000                                   
+
+(X_U2.EA_SS_CCLOOP_SS_COMPLETE_INT)    0.0000                                   
+
+(X_U2.X_CS_AMP_U1912603712.x2.YINT)    0.0000                                   
+
+(X_U2.X_CS_AMP_U1912603719.x2.YINT)    0.0000                                   
+
+(X_U2.X_current_limit_U643.x2.YINT)    0.0000                                   
+
+(X_U2.X_current_limit_U652.X3.YINT)    0.0000                                   
+
+(X_U2.X_min_timer_min_on_U823.YINT)    0.0000                                   
+
+(X_U2.X_min_timer_min_on_U825.YINT)    0.0000                                   
+
+(X_U2.X_CS_AMP_U1912603712.x1.YINT1)    0.0000                                  
+
+(X_U2.X_CS_AMP_U1912603712.x1.YINT2)    0.0000                                  
+
+(X_U2.X_CS_AMP_U1912603712.x1.YINT3)    1.0000                                  
+
+(X_U2.X_CS_AMP_U1912603712.x3.YINT1)    0.0000                                  
+
+(X_U2.X_CS_AMP_U1912603712.x3.YINT2)    0.0000                                  
+
+(X_U2.X_CS_AMP_U1912603712.x3.YINT3)    0.0000                                  
+
+(X_U2.X_CS_AMP_U1912603719.x1.YINT1)    0.0000                                  
+
+(X_U2.X_CS_AMP_U1912603719.x1.YINT2)    0.0000                                  
+
+(X_U2.X_CS_AMP_U1912603719.x1.YINT3)    1.0000                                  
+
+(X_U2.X_CS_AMP_U1912603719.x3.YINT1)    0.0000                                  
+
+(X_U2.X_CS_AMP_U1912603719.x3.YINT2)    0.0000                                  
+
+(X_U2.X_CS_AMP_U1912603719.x3.YINT3)    0.0000                                  
+
+(X_U2.X_current_limit_U643.x1.YINT1)    0.0000                                  
+
+(X_U2.X_current_limit_U643.x1.YINT2)    0.0000                                  
+
+(X_U2.X_current_limit_U643.x1.YINT3)    1.0000                                  
+
+(X_U2.X_current_limit_U643.x3.YINT1)    0.0000                                  
+
+(X_U2.X_current_limit_U643.x3.YINT2)    0.0000                                  
+
+(X_U2.X_current_limit_U643.x3.YINT3)    0.0000                                  
+
+(X_U2.X_min_timer_min_on_U822.YINT1)    0.0000                                  
+
+(X_U2.X_min_timer_min_on_U822.YINT2)    0.0000                                  
+
+(X_U2.X_min_timer_min_on_U822.YINT3)    1.0000                                  
+
+(X_U2.X_current_limit_U1912603701.YINT)    0.0000        
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_VIN        1.528E-12
+    X_U2.V_current_limit_V5   0.000E+00
+    X_U2.V_current_limit_V1   0.000E+00
+    X_U2.V_current_limit_V4   0.000E+00
+    X_U2.V_Drivers_V3   0.000E+00
+    X_U2.V_Drivers_V6   0.000E+00
+    X_U2.V_Drivers_V4   0.000E+00
+    X_U2.V_Drivers_V5   0.000E+00
+    X_U2.V_CS_AMP_V96   0.000E+00
+    X_U2.V_CS_AMP_V94   0.000E+00
+    X_U2.V_CS_AMP_V70   0.000E+00
+    X_U2.V_CS_AMP_V86   0.000E+00
+    X_U2.V_CS_AMP_V6   0.000E+00
+    X_U2.V_VCC_REG_V82   0.000E+00
+    X_U2.V_VCC_REG_V85   0.000E+00
+    X_U2.V_VCC_REG_V84   0.000E+00
+    X_U2.V_VCC_REG_V83   0.000E+00
+    X_U2.V_VCC_REG_V45  -6.601E-12
+    X_U2.V_OSC_V47  -1.506E-04
+    X_U2.V_OSC_V45  -1.506E-04
+    X_U2.V_OSC_V46   0.000E+00
+    X_U2.V_V73   0.000E+00
+    X_U2.V_min_timer_V86   0.000E+00
+    X_U2.V_EA_SS_CCLOOP_V71   1.100E-05
+    X_U2.V_EA_SS_CCLOOP_V70  -2.441E-12
+    X_U2.V_PGOOD_OVP_V4   0.000E+00
+    X_U2.V_PGOOD_OVP_V1   0.000E+00
+    X_U2.V_PGOOD_OVP_V2   0.000E+00
+    X_U2.V_PGOOD_OVP_V3   0.000E+00
+    X_U2.V_Slope_Comp_V1  -9.900E-12
+    X_U2.V_DCM_V3  -1.500E-11
+    X_U2.V_DCM_V4   0.000E+00
+    X_U2.X_current_limit_U31.v1  -1.001E-12
+    X_U2.X_current_limit_U31.v2   9.742E-27
+    X_U2.X_current_limit_U643.v1  -5.011E-12
+    X_U2.X_current_limit_U652.V1  -1.011E-12
+    X_U2.X_current_limit_U652.V2  -5.677E-14
+    X_U2.X_CS_AMP_U643.v1  -5.011E-12
+    X_U2.X_CS_AMP_U731.V1  -1.001E-12
+    X_U2.X_CS_AMP_U731.V2   2.776E-27
+    X_U2.X_CS_AMP_U1912603712.v1  -5.011E-12
+    X_U2.X_CS_AMP_U717.V1  -1.011E-12
+    X_U2.X_CS_AMP_U717.V2  -5.677E-14
+    X_U2.X_CS_AMP_U1912603719.v1  -5.011E-12
+    X_U2.X_CS_AMP_U679.V1  -1.001E-12
+    X_U2.X_CS_AMP_U679.V2   2.776E-27
+    X_U2.X_OSC_H1.VH_OSC_H1  -1.506E-04
+    X_U2.X_min_timer_U650.v1  -5.011E-12
+    X_U2.X_min_timer_U653.v1  -5.001E-12
+    X_U2.X_min_timer_U829.v1  -1.011E-12
+    X_U2.X_min_timer_U829.v2  -2.101E-01
+    X_U2.X_min_timer_U652.v1  -5.011E-12
+    X_U2.X_min_timer_U831.V1  -1.001E-12
+    X_U2.X_min_timer_U831.V2   9.742E-27
+    X_U2.X_min_timer_U654.v1  -5.001E-12
+    X_U2.X_DCM_U1912603689.V1  -9.910E-13
+    X_U2.X_DCM_U1912603689.V2   1.098E-14
+    X_U2.X_DCM_U1912603696.V1  -9.910E-13
+    X_U2.X_DCM_U1912603696.V2   1.098E-14
+
+    TOTAL POWER DISSIPATION   2.22E-03  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 05/20/26 21:33:48 *** PSpice 24.1.0 (4 September 2024) *** ID# 0 ********
+
+ ** Profile: "Startup-trans"  [ C:\Users\main\Desktop\LM5176_PSPICE_TRANS\lm5176_trans-pspicefiles\startup\trans.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =      175.72
+

@@ -1,0 +1,31 @@
+** Profile: "Startup-trans"  [ C:\Users\main\Desktop\LM5176_PSPICE_TRANS\lm5176_trans-pspicefiles\startup\trans.sim ] 
+
+** Creating circuit file "trans.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../lm5176_trans.lib" 
+* From [PSPICE NETLIST] section of C:\Users\main\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\24.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 5m 0 20n 
+.OPTIONS STEPGMIN
+.OPTIONS ADVCONV
+.OPTIONS ABSTOL= 10.0n
+.OPTIONS ITL1= 1500
+.OPTIONS ITL2= 400
+.OPTIONS ITL4= 60
+.OPTIONS RELTOL= 0.01
+.OPTIONS VNTOL= 10.0u
+.OPTIONS SPEED_LEVEL= 5
+.PROBE64 N([VOSNS-])
+.PROBE64 I(V_VIN)
+.PROBE64 W(V_VIN)
+.PROBE64 W(X_U2)
+.INC "..\Startup.net" 
+
+
+.END

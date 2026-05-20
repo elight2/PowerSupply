@@ -1,0 +1,144 @@
+
+**** 05/20/26 21:22:08 *** PSpice 24.1.0 (4 September 2024) *** ID# 0 ********
+
+ ** Profile: "Startup-trans"  [ C:\Users\main\Desktop\LM5176_PSPICE_TRANS\lm5176_trans-pspicefiles\startup\trans.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "trans.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../lm5176_trans.lib" 
+* From [PSPICE NETLIST] section of C:\Users\main\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\24.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 5m 0 20n 
+.OPTIONS STEPGMIN
+.OPTIONS ADVCONV
+.OPTIONS ABSTOL= 10.0n
+.OPTIONS ITL1= 1500
+.OPTIONS ITL2= 400
+.OPTIONS ITL4= 60
+.OPTIONS RELTOL= 0.01
+.OPTIONS VNTOL= 10.0u
+.OPTIONS SPEED_LEVEL= 5
+.PROBE64 N([VOSNS-])
+.PROBE64 I(V_VIN)
+.INC "..\Startup.net" 
+
+
+
+**** INCLUDING Startup.net ****
+* source LM5176_TRANS
+X_U2         0 VOSNS- BOOT1 BOOT2 COMP CS CSG DITH EN FB HDRV1 HDRV2 N16806770
++  N16806697 LDRV1 LDRV2 MODE 0 0 N16806749 RT_SYNC SLOPE SS SW1 SW2 VCC
++  N16806353 VINSNS VOSNS- LM5176_TRANS PARAMS: SS=0
+C_C24         N16806770 N16806697  0.33u IC=0 
+R_R51         N16806490 LDRV2  0.6  
+C_C3         VIN 0  2.2u IC=0 
+R_R53         HDRV1 N16806513  1.6  
+R_R8         CSG 0  100  
+C_C21         SS 0  10n  
+R_R14         N16806635 FB  280k  
+X_C7         VOSNS+ 0 CESR PARAMS: C=2.2u ESR=2m IC=1N X=1
+X_C13         VOSNS- 0 CESR PARAMS: C=100u ESR=16m IC=0 X=1
+R_R21         VOSNS+ N16806770  100  
+C_C5         VIN 0  2.2u IC=0 
+D_D9         N16806389 SW1 Dbreak 
+X_L1         SW1 SW2 LDCR PARAMS: L=4.7u DCR=3.35m
+C_C22         N168069590 COMP  0.033u IC=0 
+R_R6         CS N16806389  100  
+D_D4         VCC BOOT1 Dbreak 
+R_R9         N16806366 N16806353  10  
+R_R7         0 N16806389  0.004  
+X_S14    N16806496 N16806389 SW1 N16806389 Startup_S14 
+C_C32         VIN 0  2.2u IC=0 
+R_R22         0 FB  20k  
+X_C10         VOSNS+ 0 CESR PARAMS: C=2.2u ESR=2m IC=1N X=1
+R_R16         VOSNS- N16806697  100  
+R_R1         VOSNS+ VOSNS-  4m  
+R_RLOAD         VOSNS- 0  {12/7}  
+D_D7         SW1 VIN Dbreak 
+C_C16         VCC 0  4.7u  
+C_C25         0 VOSNS-  0.22u IC=0 
+R_R13         VIN EN  249k  
+C_C30         VOSNS- 0  100p IC=0 
+C_C18         BOOT1 SW1  0.22u IC=0 
+C_C28         0 COMP  330pF  
+R_R15         VIN VINSNS  2k  
+R_R18         EN 0  75k  
+C_C17         N16806353 0  0.1u  
+D_D10         N16806389 SW2 Dbreak 
+R_R50         N16806536 HDRV2  0.6  
+X_S4    N16806490 N16806389 SW2 N16806389 Startup_S4 
+C_C4         VIN 0  2.2u IC=0 
+R_R11         VOSNS- N16806635  10  
+X_S5    N16806513 SW1 VIN SW1 Startup_S5 
+R_R19         0 MODE  93.1k  
+R_R10         N16806749 VCC  10k  
+X_C8         VOSNS+ 0 CESR PARAMS: C=2.2u ESR=2m IC=1N X=1
+D_D8         SW2 VOSNS+ Dbreak 
+D_D3         VIN N16806366 Dbreak 
+X_C9         VOSNS+ 0 CESR PARAMS: C=2.2u ESR=2m IC=1N X=1
+C_C1         VIN 0  100u IC=0 
+R_R23         0 N168069590  20k  
+R_R55         LDRV1 N16806496  1.6  
+C_C2         VIN 0  2.2u IC=0 
+V_VIN         VIN 0  
++PWL 0 0 1u 0 100u 12 10m 12 
+C_C29         0 SLOPE  470p IC=0 
+C_C19         BOOT2 SW2  0.22u IC=0 
+X_C11         VOSNS+ 0 CESR PARAMS: C=2.2u ESR=2m IC=1N X=1
+X_S6    N16806536 SW2 VOSNS+ SW2 Startup_S6 
+D_D5         VCC BOOT2 Dbreak 
+C_C15         CS CSG  47p IC=0 
+X_C33         VOSNS- 0 CESR PARAMS: C=100u ESR=16m IC=0 X=1
+X_C34         VOSNS- 0 CESR PARAMS: C=100u ESR=16m IC=0 X=1
+X_C35         VOSNS- 0 CESR PARAMS: C=100u ESR=16m IC=0 X=1
+X_C36         VOSNS- 0 CESR PARAMS: C=100u ESR=16m IC=0 X=1
+X_C37         VOSNS- 0 CESR PARAMS: C=100u ESR=16m IC=0 X=1
+C_C38         0 DITH  10n  TC=0,0 
+R_R20         0 RT_SYNC  33.2k  
+
+.subckt Startup_S14 1 2 3 4  
+S_S14         3 4 1 2 _S14
+RS_S14         1 2 1G
+.MODEL         _S14 VSWITCH Roff=10e10 Ron=3.9m Voff=2.1 Von=2.8
+.ends Startup_S14
+
+.subckt Startup_S4 1 2 3 4  
+S_S4         3 4 1 2 _S4
+RS_S4         1 2 1G
+.MODEL         _S4 VSWITCH Roff=10e10 Ron=1.4m Voff=1.2 Von=1.7
+.ends Startup_S4
+
+.subckt Startup_S5 1 2 3 4  
+S_S5         3 4 1 2 _S5
+RS_S5         1 2 1G
+.MODEL         _S5 VSWITCH Roff=10e10 Ron=3.9m Voff=2.1 Von=2.8
+.ends Startup_S5
+
+.subckt Startup_S6 1 2 3 4  
+S_S6         3 4 1 2 _S6
+RS_S6         1 2 1G
+.MODEL         _S6 VSWITCH Roff=10e10 Ron=1.4m Voff=1.2 Von=1.7
+.ends Startup_S6
+
+**** RESUMING trans.cir ****
+.END
+
+ERROR(ORPSIM-15141): Less than 2 connections at node DITH.
+
+ERROR(ORPSIM-15142): Node DITH is floating
+
